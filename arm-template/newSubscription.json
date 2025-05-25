@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "region": {
+            "type": "string",
+            "metadata": {
+                "description": "The Azure region for the new subscription."
+            }
+        },
+        "subscriptionAliasName": {
+            "type": "string",
+            "metadata": {
+                "description": "The alias name for the new subscription."
+            }
+        },
+        "billingScope": {
+            "type": "string",
+            "metadata": {
+                "description": "The billing scope for the new subscription."
+            }
+        }
+    },
+    "resources": [],
+    "outputs": {
+        "subscriptionAlias": {
+            "type": "string",
+            "value": "[parameters('subscriptionAliasName')]"
+        },
+        "region": {
+            "type": "string",
+            "value": "[parameters('region')]"
+        },
+        "billingScope": {
+            "type": "string",
+            "value": "[parameters('billingScope')]"
+        }
+    }
+}
